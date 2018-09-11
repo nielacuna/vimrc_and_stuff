@@ -38,6 +38,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -91,7 +92,8 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 "nnoremap <F12> :Explore<CR>
 nnoremap <F12> :NERDTreeToggle<CR>
 nnoremap <F11> :TagbarToggle<CR>
-nnoremap <F10> :YcmCompleter GoToInclude<CR>
+"nnoremap <F10> :YcmCompleter GoToInclude<CR>
+nnoremap <F10> :CtrlP<CR>
 
 set number
 
