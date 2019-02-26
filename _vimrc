@@ -39,6 +39,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'Raimondi/delimitMate'
+"Plugin 'ryanoasis/vim-devicons'
+Plugin 'MattesGroeger/vim-bookmarks'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,6 +64,8 @@ filetype plugin indent on    " required
 endif "gui_running
 
 "let g:ycm_global_ycm_extra_conf = 'C:\Users\Administrator\.vim\bundle\YouCompleteMe\third_party\ycmd\cpp\ycm\.ycm_extra_conf.py'
+
+autocmd FileType make setlocal noexpandtab
 
 syntax on
 
@@ -83,17 +91,19 @@ set cc=80
 set smartindent
 
 set guifont=Consolas:h10:cANSI
+"set guifont=Inconsolata:h10:cANSI
 set hlsearch
 
-inoremap ( ()<ESC>i
-inoremap { {}<ESC>i
+set guioptions-=m "remove menu bar
+set guioptions-=T "remove tool bar
+set guioptions-=r " remove right hand scrollbar
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 "nnoremap <F12> :Explore<CR>
 nnoremap <F12> :NERDTreeToggle<CR>
 nnoremap <F11> :TagbarToggle<CR>
 "nnoremap <F10> :YcmCompleter GoToInclude<CR>
-nnoremap <F10> :CtrlP<CR>
+nnoremap <F10> :FZF<CR>
 
 set number
 
