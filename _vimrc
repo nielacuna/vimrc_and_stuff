@@ -94,6 +94,12 @@ set guifont=Consolas:h10:cANSI
 "set guifont=Inconsolata:h10:cANSI
 set hlsearch
 
+"remove arrows keys bindings - they are annoying
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap  <Left> <nop>
+noremap <Right> <nop>
+
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove tool bar
 set guioptions-=r " remove right hand scrollbar
