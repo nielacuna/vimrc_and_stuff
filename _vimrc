@@ -44,7 +44,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'Raimondi/delimitMate'
 "Plugin 'ryanoasis/vim-devicons'
 Plugin 'MattesGroeger/vim-bookmarks'
-
+Plugin 'chrisbra/unicode.vim'
+Plugin 'mg979/vim-visual-multi'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
