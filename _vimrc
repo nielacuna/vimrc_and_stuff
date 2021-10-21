@@ -46,6 +46,9 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'chrisbra/unicode.vim'
 Plugin 'mg979/vim-visual-multi'
+Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-speeddating'
+"Plugin 'aserebryakov/vim-todo-lists'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -91,7 +94,7 @@ set expandtab "for converting tabs to spaces
 set cc=80
 set smartindent
 
-set guifont=Consolas:h10:cANSI
+"set guifont=Consolas:h10:cANSI
 "set guifont=Inconsolata:h10:cANSI
 set hlsearch
 
@@ -113,6 +116,13 @@ nnoremap <F11> :TagbarToggle<CR>
 nnoremap <F10> :FZF<CR>
 
 set number
+
+" window resizing stuff
+nnoremap <silent> <C-k> :vertical resize -3<CR>
+nnoremap <silent> <C-j> :vertical resize +3<CR>
+
+nnoremap <silent> <C-h> :res -3<CR>
+nnoremap <silent> <C-l> :res +3<CR>
 
 "status line 
 set laststatus=2
