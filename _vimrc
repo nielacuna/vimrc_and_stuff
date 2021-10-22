@@ -118,11 +118,11 @@ nnoremap <F10> :FZF<CR>
 set number
 
 " window resizing stuff
-nnoremap <silent> <C-k> :vertical resize -3<CR>
-nnoremap <silent> <C-j> :vertical resize +3<CR>
+nnoremap <silent> <C-h> :vertical resize -3<CR>
+nnoremap <silent> <C-l> :vertical resize +3<CR>
 
-nnoremap <silent> <C-h> :res -3<CR>
-nnoremap <silent> <C-l> :res +3<CR>
+nnoremap <silent> <C-j> :res -3<CR>
+nnoremap <silent> <C-k> :res +3<CR>
 
 "status line 
 set laststatus=2
