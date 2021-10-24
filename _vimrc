@@ -46,9 +46,9 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'chrisbra/unicode.vim'
 Plugin 'mg979/vim-visual-multi'
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating'
-"Plugin 'aserebryakov/vim-todo-lists'
+"Plugin 'jceb/vim-orgmode'
+"Plugin 'tpope/vim-speeddating'
+Plugin 'vimwiki/vimwiki'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -104,6 +104,9 @@ noremap <Down> <nop>
 noremap  <Left> <nop>
 noremap <Right> <nop>
 
+" map F5 to today's date in insert mode
+inoremap <F5> <C-R>=strftime("[%b-%d-%Y %a]")<CR>
+
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove tool bar
 set guioptions-=r " remove right hand scrollbar
@@ -136,3 +139,18 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 
+" orgmode settings
+let g:org_prefer_insert_mode = 0
+let g:org_aggressive_conceal = 0
+let g:org_indent = 1
+let g:org_todo_keywords = [['TODO(t)', 'INPROGRESS(i)', '|', 'DONE(d)'],
+      \ ['REPORT(r)', 'BUG(b)', 'KNOWNCAUSE(k)', '|', 'FIXED(f)'],
+      \ ['CANCELED(c)']]
+
+
+" vimwiki settings
+
+" define my own wiki on the usual "custom" git repo
+let main_wiki = {}
+let main_wiki.path = '~/git/vimwiki/'
+let g:vimwiki_list = [main_wiki]
