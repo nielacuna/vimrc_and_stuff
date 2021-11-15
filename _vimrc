@@ -94,7 +94,7 @@ set expandtab "for converting tabs to spaces
 set cc=80
 set smartindent
 
-"set guifont=Consolas:h10:cANSI
+set guifont=Consolas:h10:cANSI
 "set guifont=Inconsolata:h10:cANSI
 set hlsearch
 
@@ -132,6 +132,14 @@ set laststatus=2
 set statusline=
 set statusline+=%f%m
 set statusline+=%=%y\ %l,%c\ %p%%\  
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
 
 let g:netrw_liststyle = 3
 
